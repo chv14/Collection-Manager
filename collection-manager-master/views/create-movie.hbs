@@ -1,0 +1,88 @@
+<h1>Movie Create</h1>
+
+<form action='/movie/create' method='POST'>
+  <div class='form-group'>
+    <label for='title'>Title</label>
+    <input type='text' class='form-control' name='title' id='id' />
+  </div>
+
+  <div class='from-group'>
+    <label for='year'>Year</label>
+    <input
+      type='number'
+      class='form-control'
+      name='year'
+      id='year'
+      min='1800'
+      max='2999'
+    />
+  </div>
+
+  <div class='from-group'>
+    <label for='region'>Region</label>
+    <input type='text' class='form-control' name='region' id='region' />
+  </div>
+
+  <div class='from-group'>
+    <label for='movdescription'>Movie Description</label>
+    <input
+      type='text'
+      class='form-control'
+      name='movdescription'
+      id='movdescription'
+    />
+  </div>
+
+  <div class='from-group'>
+    <label for='ratings'>Ratings</label>
+    <select name='ratings' id='ratings' class='form-control'>
+      <option value='1'>1</option>
+      <option value='2'>2</option>
+      <option value='3'>3</option>
+      <option value='4'>4</option>
+      <option value='5'>5</option>
+    </select>
+  </div>
+
+  <div class='from-group'>
+    <label for='description'> Genre Description</label>
+    <select name='genreId' id='genre' class='form-control'>
+      {{#each genres}}
+        <option value='{{genreid}}'>{{description}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div class='from-group'>
+    <label for='actfirstname'>Actor First Name</label>
+    <input
+      type='text'
+      class='form-control'
+      name='actfirstname'
+      id='actfirstname'
+    />
+  </div>
+
+  <div class='from-group'>
+    <label for='actlastname'>Actor Last Name</label>
+    <input
+      type='text'
+      class='form-control'
+      name='actlastname'
+      id='actlastname'
+    />
+  </div>
+
+  <div class='from-group'>
+    <label for='actgender'>Actor Gender</label>
+    <select name='actgender' id='gender' class='form-control'>
+      <option value='Male'>Male</option>
+      <option value='Female'>Female</option>
+    </select>
+  </div>
+  <br />
+
+  <input type='submit' class='btn btn-primary' value='Create' />
+  <a class='btn btn-secondary' href='/' role="button">Back Home</a>
+
+</form>

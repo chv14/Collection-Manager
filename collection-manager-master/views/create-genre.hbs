@@ -1,0 +1,19 @@
+<h1>Create New Movie Genre</h1>
+
+<form action='/genre/create' method='POST'>
+  <div class='from-group'>
+    <label for='genre_description'> New Genre </label>
+    <input
+      type='text'
+      class='form-control'
+      name='genre_description'
+      id='genre_description'
+    />
+  </div>
+
+  <br>
+
+  <input type='submit' class='btn btn-primary' value='Create' />
+  <a class='btn btn-secondary' href='/genre' role='button'>Back</a>
+
+</form>

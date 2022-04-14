@@ -1,0 +1,20 @@
+<h1>Genre Update</h1>
+
+<form action='/genre/{{result.genreid}}/edit' method='POST'>
+  <div class='from-group'>
+    <label for='description'> Genre Description</label>
+    <input
+      type='text'
+      class='form-control'
+      name='genre_description'
+      id='genre_description'
+      value="{{result.description}}"
+    />
+  </div>
+
+  <br />
+
+  <input type='submit' class='btn btn-primary' value='Update' />
+  <a class='btn btn-secondary' href='/genre' role='button'>Back</a>
+
+</form>

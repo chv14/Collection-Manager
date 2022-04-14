@@ -1,0 +1,32 @@
+<h1>Movie Genre</h1>
+
+<p><a class='btn btn-primary' href='/genre/create' role='button'>New Genre</a></p>
+
+<table class='table table-striped table-bordered'>
+  <tr>
+    <th>Movie Genres</th>
+    <th>Actions</th>
+  </tr>
+
+  {{#each rows}}
+    <tr>
+      <td>{{description}}</td>
+
+      <td>
+        <a
+          class='btn btn-success'
+          href='/genre/{{genreid}}/edit'
+          role='button'
+        >Edit
+        </a>
+        <a
+          class='btn btn-danger'
+          href='/genre/{{genreid}}/delete'
+          role='button'
+        >Delete
+        </a>
+      </td>
+    </tr>
+  {{/each}}
+</table>
+<a class='btn btn-secondary' href='/' role='button'>Back Home</a>

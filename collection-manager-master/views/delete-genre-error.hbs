@@ -1,0 +1,15 @@
+<h2>Sorry, movie genre "{{genre}}" cannot be deleted because it is the genre for the following movies:
+</h2>
+
+{{#each result}}
+  <ul>
+    <li><a href="/movie/{{movieid}}">{{title}}</a></li>
+  </ul>
+{{/each}}
+
+<p>You will have to delete those movies first before deleting the movie genre.</p>
+
+<p>
+  <a class='btn btn-secondary' href='/' role='button'>Back Home</a>
+  <a class='btn btn-secondary' href='/genre' role='button'>Back to Genre</a>
+</p>

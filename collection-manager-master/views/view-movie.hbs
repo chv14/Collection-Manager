@@ -1,0 +1,46 @@
+<table class='table table-striped table-bordered'>
+  <tr>
+    <th>Year</th>
+    <th>Region</th>
+    <th>Ratings</th>
+    <th>Genre</th>
+    <th>Actor First Name</th>
+    <th>Actor Last Name</th>
+    <th>Actor Gender</th>
+  </tr>
+  {{#each rows}}
+    <h1>{{title}}</h1>
+    <strong>Movie Description</strong>
+    <br />
+    <p>{{movie_description}}</p>
+    <tr>
+      <td>{{year}}</td>
+      <td>{{region}}</td>
+      <td>{{ratings}}</td>
+      <td>{{description}}</td>
+      <td>{{actfirstname}}</td>
+      <td>{{actlastname}}</td>
+      <td>{{actgender}}</td>
+    </tr>
+    <p>
+      <a
+        class='btn btn-success'
+        href='/movie/{{movieid}}/edit'
+        role='button'
+      >Edit
+      </a>
+      <a
+        class='btn btn-danger'
+        href='/movie/{{movieid}}/delete'
+        role='button'
+      >Delete
+      </a>
+    </p>
+  {{/each}}
+</table>
+
+{{#if movie.photo}}
+<img src="/images/{{movie.photo}}">
+{{/if}}  
+
+<p><a class='btn btn-secondary' href='/' role='button'>Back Home</a></p>

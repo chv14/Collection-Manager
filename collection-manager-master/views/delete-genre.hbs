@@ -1,0 +1,8 @@
+<h2>Are you sure you want to delete {{result.description}}?</h2>
+
+<form action='/genre/{{result.genreid}}/delete' method='POST'>
+  <p>
+    <input type='submit' class='btn btn-danger' value='Delete' />
+    <a class='btn btn-secondary' href='/genre' role='button'>Cancel</a>
+  </p>
+</form>
